@@ -5,9 +5,9 @@
 
 Pair trading aims to earn **market-neutral** profits by hedging two assets and exploiting temporary mispricings. However, many prior approaches **separate pair selection and execution**, which prevents trading outcomes from improving the next round of selection and can lead to overfitting. Moreover, using only raw/aggregated price series often fails to capture the **visual patterns** traders commonly rely on.
 
-We propose **ISEPT**, an end-to-end framework that directly uses **candlestick chart images** and links **pair selection ↔ trading** through a **Sharpe-ratio feedback loop**. A **Convolutional Autoencoder (CAE)** encodes monthly candlestick images into stock-level latent vectors, and an **MLP** predicts the **next-month Sharpe ratio** for each candidate pair. At month-end, realized trading results are fed back as new training data so the model continuously adapts to market regime changes. 
+We propose **ISEPT**, an end-to-end framework that directly uses **candlestick chart images** and links **pair selection ↔ trading** through a **Sharpe-ratio feedback loop**. A **Convolutional Autoencoder (CAE)** encodes monthly candlestick images into stock-level latent vectors, and an **MLP** predicts the **next-month Sharpe ratio** for each candidate pair. At month-end, realized trading results are fed back as new training data so the model continuously adapts to market regime changes.
 
-![Figure1](https://github.com/user-attachments/assets/598b907a-79bb-4f3e-86ea-e85f2cfa9415)
+![Figure1](https://github.com/user-attachments/assets/b6052ce5-a936-4b67-b3a4-429fd5364231)
 
 ---
 
